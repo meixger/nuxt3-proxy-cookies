@@ -15,19 +15,20 @@ const fetchDirect = async () => {
     <h1>unjs/h3 proxy vs direct fetch</h1>
 
     <fieldset>
-      <legend>proxy fetch fails</legend>
+      <legend>proxy fetch works now because of patch</legend>
       <button @click="fetchFromProxy()">fetch /thirtpartyapi/setcookies</button>
       {{ proxyData }}
-      <pre>example response:
+      <pre>example response patched:
 
 HTTP/1.1 200 OK
 access-control-allow-origin: *
 connection: close
 content-type: application/json
-date: Mon, 30 Jan 2023 11:45:38 GMT
-<b>set-cookie: username=bob; Expires=Thu, 01 Jun 2023 10:00:00 GMT; Path=/; HttpOnly, roles=guest; Path=/</b>
+date: Mon, 30 Jan 2023 12:16:24 GMT
+<b>set-cookie: username=bob; Expires=Thu, 01 Jun 2023 10:00:00 GMT; Path=/; HttpOnly
+set-cookie: roles=guest; Path=/</b>
 transfer-encoding: chunked</pre>
-      <p>single combined set-cookie header from unjs/h3 proxyRequest(). browser can't set both cookies correctly.</p>
+      <p>set-cookie header is splited in unjs/h3 by patch</p>
     </fieldset>
 
     <br />
