@@ -2,10 +2,7 @@ import { useRequestEvent } from "#app";
 import { appendHeader } from "h3";
 
 export default async function useMyFetch<T>(path: string) {
-  if (process.server) {
-    path = "http://localhost:3100" + path;
-    console.log("useMyFetch agument ssr path to", path);
-  }
+  if (process.server) path = "http://localhost:3100" + path;
 
   const headers = useRequestHeaders(["cookie"]) as HeadersInit;
   const event = useRequestEvent();

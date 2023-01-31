@@ -19,7 +19,7 @@ const fetchDirect = async () => {
     <div>
         <fieldset>
             <legend>SSR</legend>
-            <!-- <div>{{ data || "ssr" }}</div> -->
+            <div>{{ data || "ssr" }}</div>
             <div>user: {{ data?.user }}</div>
             <div>roles: {{ data?.roles }}</div>
             <button @click="refresh()">refresh</button>
