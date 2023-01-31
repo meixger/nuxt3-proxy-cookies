@@ -15,14 +15,6 @@ export default defineNuxtConfig({
         target: "http://localhost:3100/api/node",
         headers: { "x-devproxy": "yes" },
       },
-      "/proxy/setcookies": {
-        target: "http://localhost:3000/api/setcookies",
-        headers: { "x-devproxy": "yes" },
-      },
-      "/api/dotnet/": {
-        target: "http://localhost:5000/api/dotnet/",
-        headers: { "x-devproxy": "yes" },
-      },
     },
   },
 });

@@ -1,4 +1,4 @@
-# Nuxt 3 data fetching from external API with cookies
+# Nuxt 3 isomorphic data fetching from external API with cookies
 
 # API
 
