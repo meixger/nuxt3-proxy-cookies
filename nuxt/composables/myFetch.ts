@@ -1,4 +1,6 @@
+// !!! ATT import is required !!!
 import { useRequestEvent } from "#app";
+// !!! ATT import is required !!!
 import { appendHeader } from "h3";
 
 export default async function useMyFetch<T>(path: string) {
